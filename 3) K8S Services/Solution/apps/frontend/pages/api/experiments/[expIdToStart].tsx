@@ -1,8 +1,5 @@
 import { NextApiHandler } from 'next';
 
-// TODO the frontend should not have to directly communicate with the backend servers for this,
-//  it should just put stuff into database -> it's backend's job to look for new tasks to run
-
 const startExperimentHandler: NextApiHandler = async (req, res) => {
 	const { expIdToStart } = req.query;
 	const { key } = req.body;
