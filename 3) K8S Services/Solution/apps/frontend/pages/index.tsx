@@ -39,6 +39,24 @@ export default function Home() {
         />
       </div>
 
+      <button onClick={async () => {
+        console.log(`Handing experiment 1234 to the backend`);
+				const response = await fetch(`/api/experiments/${1234}`, {
+					method: 'POST',
+					headers: new Headers({ 'Content-Type': 'application/json' }),
+					credentials: 'same-origin',
+					body: JSON.stringify({ id: 1234 }),
+				});
+				if (response.ok) {
+					console.log('Response from backend received', response);
+				} else {
+					const responseText = await response.text();
+					console.log('Upload failed', responseText, response);
+					throw new Error(`Upload failed: ${response.status}: ${responseText}`);
+				}
+
+      }}>Run an Experiment</button>
+
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
