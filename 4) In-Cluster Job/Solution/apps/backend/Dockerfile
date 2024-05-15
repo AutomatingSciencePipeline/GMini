@@ -13,4 +13,4 @@ COPY . /app
 
 USER root
 ENV FLASK_ENV production
-CMD flask run --host=0.0.0.0 -p 5050
+CMD flask run --host=0.0.0.0 -p 8080

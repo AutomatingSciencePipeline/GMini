@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: persistent-volume-claim
+  labels:
+    app: gmini
+spec:
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteOnce 
+  volumeName: persistent-volume
+  resources:
+    requests:
+      storage: 1Gi

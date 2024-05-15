@@ -22,3 +22,7 @@ kubectl apply -f ./k8s/frontend/deployment.yaml
 ```
 kubectl port-forward deployment/gmini-frontend 3000:3000
 ```
+
+```
+kubectl delete po,svc -l app=gmini
+```

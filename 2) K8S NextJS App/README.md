@@ -46,7 +46,7 @@ docker push <your docker hub username>/gmini-frontend:latest
 
 ## 3) Create a Deployment
 
-Try to make the frontend deployment yourself. If you need help, refer to the solution. Don't forget to use the port 3000.
+Try to make the frontend deployment yourself. If you need help, refer to the solution.
 
 To create a frontend k8s object, run:
 

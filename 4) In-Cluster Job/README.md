@@ -154,6 +154,8 @@ kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: job-creator
+  labels:
+    app: gmini
 rules:
 - apiGroups: ["batch"]
   resources: ["jobs"]
@@ -168,6 +170,8 @@ apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: job-creator
   namespace: default
+  labels:
+    app: gmini
 subjects:
 - kind: ServiceAccount
   name: default
