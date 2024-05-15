@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gmini-backend
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gmini
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: gmini
+        tier: backend
+    spec:
+      containers:
+      - name: gmini-backend
+        image: sugiyat/gmini-backend:latest
+        ports:
+        - containerPort: 5050

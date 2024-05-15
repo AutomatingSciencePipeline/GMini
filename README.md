@@ -19,3 +19,6 @@ kubectl apply -f ./k8s/frontend/deployment.yaml
 ```
 
 
+```
+kubectl port-forward deployment/gmini-frontend 3000:3000
+```
