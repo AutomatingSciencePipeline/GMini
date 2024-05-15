@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gmini-frontend
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gmini
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: gmini
+        tier: frontend
+    spec:
+      containers:
+      - name: gmini-frontend
+        image: sugiyat/gmini-frontend:latest
+        ports:
+        - containerPort: 3000
