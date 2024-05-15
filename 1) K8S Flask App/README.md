@@ -147,7 +147,7 @@ spec:
     spec:
       containers:
         - name: gmini-backend
-          image: <dockerhub_username>/gmini-backend:latest
+          image: <your dockerhub username>/gmini-backend:latest
           ports:
             - containerPort: 5050
 ```
