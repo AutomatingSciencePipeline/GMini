@@ -10,5 +10,17 @@
 pipenv install
 ```
 
-TODO: Update the backend dockerfile idiot
-TODO: Update the frontent dockergile
+## 2) Spawning the Runner From the Backend
+
+- create a yaml file for the runner
+- create a new python module
+- modify app.py
+
+```
+pipenv install kubernetes~=29.0.0
+```
+
+## 3) In-Cluster Spawning Permissions
+
+- cluster role
+- cluster role binding
