@@ -11,5 +11,5 @@ spec:
     tier: backend
   ports:
     - protocol: TCP
-      port: 5050
-      targetPort: 5050
+      port: 8080
+      targetPort: 8080

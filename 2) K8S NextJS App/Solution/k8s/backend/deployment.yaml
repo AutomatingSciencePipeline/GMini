@@ -18,5 +18,3 @@ spec:
       containers:
       - name: gmini-backend
         image: sugiyat/gmini-backend:latest
-        ports:
-        - containerPort: 5050

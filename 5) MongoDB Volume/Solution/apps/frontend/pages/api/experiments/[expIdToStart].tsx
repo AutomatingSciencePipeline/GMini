@@ -6,7 +6,7 @@ const startExperimentHandler: NextApiHandler = async (req, res) => {
 
 	console.log("The expIdToStart is ", expIdToStart);
 	try {
-		const url = `http://gmini-backend:5050/experiment`;
+		const url = `http://gmini-backend:8080/experiment`;
 		const backendResponse = await fetch(url, {
 			method: 'POST',
 			headers: new Headers({

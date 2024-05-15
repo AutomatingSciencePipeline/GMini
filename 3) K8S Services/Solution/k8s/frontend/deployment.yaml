@@ -18,5 +18,3 @@ spec:
       containers:
       - name: gmini-frontend
         image: sugiyat/gmini-frontend:latest
-        ports:
-        - containerPort: 3000

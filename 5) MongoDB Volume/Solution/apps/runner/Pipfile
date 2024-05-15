@@ -4,6 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+pymongo = "~=4.7.2"
+python-dotenv = "~=1.0.1"
 
 [dev-packages]
 

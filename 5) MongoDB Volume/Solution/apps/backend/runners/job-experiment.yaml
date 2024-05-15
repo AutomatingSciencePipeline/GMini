@@ -12,7 +12,17 @@ spec:
       - name: runner
         image: sugiyat/gmini-runner:latest
         command: []
-        # env:
+        env:
+        - name: MONGODB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: secret-env
+              key: MONGODB_USERNAME
+        - name: MONGODB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: secret-env
+              key: MONGODB_PASSWORD
       restartPolicy: Never
   backoffLimit: 4
   ttlSecondsAfterFinished: 60

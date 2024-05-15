@@ -87,10 +87,10 @@ COPY . /app
 
 USER root
 ENV FLASK_ENV production
-CMD flask run --host=0.0.0.0 -p 5050
+CMD flask run --host=0.0.0.0 -p 8080
 ```
 
-This code sets up a 'template' that tells the app to copy all files (excluding items in the dockerignore), download the dependencies within the Pipfile, and then expose the port 5050 and then start the Flask app. Then, to sign into Docker run:
+This code sets up a 'template' that tells the app to copy all files (excluding items in the dockerignore), download the dependencies within the Pipfile, and then expose the port 8080 and then start the Flask app. Then, to sign into Docker run:
 
 ```
 docker login
@@ -148,8 +148,6 @@ spec:
       containers:
         - name: gmini-backend
           image: <your dockerhub username>/gmini-backend:latest
-          ports:
-            - containerPort: 5050
 ```
 
 The yaml files are similar to Docker files in the sense that they are like 'templates' for k8s objects.
@@ -189,7 +187,7 @@ $ kubectl logs deployment/gmini-backend
  * Debug mode: off
 WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on all addresses (0.0.0.0)
- * Running on http://<ip>:5050
- * Running on http://<ip 2>:5050
+ * Running on http://<ip>:8080
+ * Running on http://<ip 2>:8080
 Press CTRL+C to quit
 ```

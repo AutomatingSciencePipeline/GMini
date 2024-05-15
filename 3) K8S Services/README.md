@@ -39,7 +39,7 @@ const startExperimentHandler: NextApiHandler = async (req, res) => {
 
 	console.log("The expIdToStart is ", expIdToStart);
 	try {
-		const url = `http://gmini-backend:5050/experiment`;
+		const url = `http://gmini-backend:8080/experiment`;
 		const backendResponse = await fetch(url, {
 			method: 'POST',
 			headers: new Headers({
@@ -138,8 +138,8 @@ spec:
     tier: backend
   ports:
     - protocol: TCP
-      port: 5050
-      targetPort: 5050
+      port: 8080
+      targetPort: 8080
 ```
 
 Note that the selector is the same as the metadata within the backend's deployment.yaml file.
